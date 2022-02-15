@@ -1,6 +1,7 @@
 import java.lang.Math;
 import java.math.BigInteger;
 import java.math.BigDecimal;
+import java.util.logging.Logger;
 
 public class Javafile{
 	public BigInteger add(BigInteger a, BigInteger b){
@@ -37,5 +38,14 @@ public class Javafile{
     }
 
     public static void main(String[] args) {
+    	Javafile jv = new Javafile();
+        Logger logger = Logger.getLogger(jv.getClass().getName());
+        logger.info("ADD with two Parameters "+ (jv.add(BigInteger.valueOf(10),BigInteger.valueOf(10))));
+        logger.info("ADD with tree Parameters "+ (jv.add(BigInteger.valueOf(10),BigInteger.valueOf(10),BigInteger.valueOf(10))));
+        logger.info("ADD with Four Parameters "+ (jv.add(BigInteger.valueOf(10),BigInteger.valueOf(10), BigInteger.valueOf(10), BigInteger.valueOf(10))));
+        logger.info("SUB with two Parameters "+ jv.sub(BigInteger.valueOf(10),BigInteger.valueOf(3)));
+        logger.info("DIV with two Parameters "+ jv.div(BigInteger.valueOf(10),BigInteger.valueOf(2)));
+        logger.info("MULT with two Parameters "+ jv.mult(BigInteger.valueOf(10),BigInteger.valueOf(3)));
+        logger.info("SQRT with two Parameters "+ jv.sqrtMethod(new BigDecimal (25)));
     }
 }
