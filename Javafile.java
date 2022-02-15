@@ -1,44 +1,41 @@
 import java.lang.Math;
+import java.math.BigInteger;
+import java.math.BigDecimal;
 
 public class Javafile{
-	public int add(int a, int b){
-		System.out.println("This is add method");
-		System.out.println("This is add method for 2 params");
-		return a + b;
-	}
+	public BigInteger add(BigInteger a, BigInteger b){
+        System.out.println("This is add method");
+        System.out.println("This is add method for 2 params");
+        return a.add(b);
+    }
 
-	public int add(int a, int b, int c){
-		System.out.println("This is add method for 3 params");
-		return a + b + c;
-	}
+    public BigInteger add(BigInteger a, BigInteger b, BigInteger c){
+        System.out.println("This is add method for 3 params");
+        return a.add(b).add(c);
+    }
 
-	public int add(int a, int b, int c, int d){
-		System.out.println("This is add method for 4 params");
-		return a + b + c + d;
-	}
+    public BigInteger add(BigInteger a, BigInteger b, BigInteger c, BigInteger d){
+        System.out.println("This is add method for 4 params");
+        return a.add(b).add(c).add(d);
+    }
 
-	public int sub(int a, int b){
-		return a - b;
-	}
+    public BigInteger sub(BigInteger a, BigInteger b){
+        return a.subtract(b);
+    }
 
-	public int div(int a, int b){
-		return a / b;
-	}
+    public BigInteger div(BigInteger a, BigInteger b){
+        return a.divide(b);
+    }
 
-	public int mult(int a, int b){
-		return a * b;
-	}
+    public BigInteger mult(BigInteger a, BigInteger b){
+        return a.multiply(b);
+    }
 
-	public double sqrtMethod(double a){
-		return Math.sqrt(a);
-	}
+    public BigDecimal sqrtMethod(BigDecimal a){
+        double d = a.doubleValue();
+        return new BigDecimal(Math.sqrt(d));
+    }
 
-	public static void main(String[] args) {
-		Javafile jf = new Javafile();
-		jf.add(5,5);
-		jf.sub(4,3);
-		jf.div(6,2);
-		jf.mult(3,2);
-		jf.sqrtMethod(25.0);
-	}
+    public static void main(String[] args) {
+    }
 }
