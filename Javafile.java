@@ -48,5 +48,6 @@ public class Javafile{
         logger.info("MULT with two Parameters "+ jv.mult(BigInteger.valueOf(10),BigInteger.valueOf(3)));
         logger.info("SQRT with two Parameters "+ jv.sqrtMethod(new BigDecimal (25)));
         System.out.println("Change!!!!");
+        System.out.println("You chose this tipe of parameter: " + args[0]);
     }
 }
